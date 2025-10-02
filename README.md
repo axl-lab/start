@@ -13,7 +13,7 @@ This repo provides a single `install.sh` bootstrap script that automates setup f
 - Admin privileges (script prompts for password during Homebrew setup and app installs; ~5-10 prompts on first run).
 - No prior developer tools assumed (e.g., no Homebrew or Xcode).
 
-## Installation from Bare MacBook
+## Installation from bare MacOS
 
 1. **Open Terminal** (built-in macOS Terminal.app suffices initially).
 
