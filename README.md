@@ -19,12 +19,15 @@ This repo provides a single `install.sh` bootstrap script that automates setup f
 
 2. **Run the Installation Script**:
    - **Preferred (One-Liner Install – No Git or Clone Needed)**:
-     ```
-     # Using curl (built-in on macOS)
-     curl -fsSL https://raw.githubusercontent.com/axl-labs/start/main/install.sh | bash
 
-     # Using wget (install via Homebrew if needed, or use curl)
-     wget -O- https://raw.githubusercontent.com/axl-labs/start/main/install.sh | bash
+     Using `curl`:
+     ```bash
+     curl -fsSL https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
+     ```
+     Or with `wget`:
+      
+     ```bash
+     wget -O- https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
      ```
      - Downloads and executes the script directly. Installs everything, including terminal selection prompt. Enter your admin password when prompted (for Homebrew setup and app installs). No external files needed. Total: 5-15 min.
    - **Alternative (Full Repo Access – For Customizing Packages)**:
