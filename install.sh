@@ -32,12 +32,15 @@ brew doctor
 # Terminal selection
 echo "Select terminal (1: Alacritty, 2: Ghostty (default), 3: Warp):"
 read -r choice
-case $choice in
-  1) SELECTED="alacritty" ;;
-  2) SELECTED="ghostty" ;;
-  3) SELECTED="warp" ;;
-  *) SELECTED="ghostty" ;;
-esac
+if [[ $choice == "1" ]]; then
+  SELECTED="alacritty"
+elif [[ $choice == "2" ]]; then
+  SELECTED="ghostty"
+elif [[ $choice == "3" ]]; then
+  SELECTED="warp"
+else
+  SELECTED="ghostty"
+fi
 echo "Selected: $SELECTED"
 
 # Define packages
