@@ -20,16 +20,16 @@ This repo provides a single `install.sh` bootstrap script that automates setup f
 2. **Run the Installation Script**:
    - **Preferred (One-Liner Install – No Git or Clone Needed)**:
 
-     Using `curl`:
-     ```bash
-     curl -fsSL https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
-     ```
+      Using `curl`:
+      ```bash
+      curl -sSL https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
+      ```
      Or with `wget`:
       
      ```bash
      wget -O- https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
      ```
-     - Downloads and executes the script directly. Installs everything, including terminal selection prompt. Enter your admin password when prompted (for Homebrew setup and app installs). No external files needed. Total: 5-15 min.
+      - Downloads and executes the script directly. Installs everything, including terminal selection prompt (1: Alacritty, 2: Warp, default: Ghostty). Enter your admin password when prompted (for Homebrew setup and app installs). No external files needed. Total: 5-15 min.
    - **Alternative (Full Repo Access – For Customizing Packages)**:
      ```
      git clone https://github.com/axl-labs/start.git ~/start
@@ -108,10 +108,10 @@ These provide visual interfaces for common dev tasks; installed into Application
 
 Some special ones include:
 
-- **Terminal Emulator (User-Selected – One Installed)**:
-  - **Alacritty**: GPU-accelerated, minimal terminal written in Rust. Config via YAML; blazing fast for heavy CLI use, no bloat.
-  - **Ghostty**: GPU-acclerated terminal written in Zig. Ligature support, true color; optimized for speed and Apple ecosystem.
-  - **Warp**: Modern terminal with blocks and AI-integration, written in Rust. Collaborative features, command suggestions; great for teams.
+- **Terminal Emulator (User-Selected – One Installed; Default: Ghostty)**:
+  - **Alacritty** (Option 1): GPU-accelerated, minimal terminal written in Rust. Config via YAML; blazing fast for heavy CLI use, no bloat.
+  - **Warp** (Option 2): Modern terminal with blocks and AI-integration, written in Rust. Collaborative features, command suggestions; great for teams.
+  - **Ghostty** (Default): GPU-accelerated terminal written in Zig. Ligature support, true color; optimized for speed and Apple ecosystem.
 - **Rectangle**: Window manager. Keyboard shortcuts (e.g., Ctrl+Opt+Left) for snapping/resizing; boosts multitasking. Turns macOS into a pseudo-window manager.
 
 ### Shell and Plugin Enhancements
