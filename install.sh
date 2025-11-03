@@ -20,7 +20,7 @@ fi
 echo "Checking for Homebrew..."
 if test ! "$(which brew)"; then
 	echo "Installing Homebrew..."
-	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	NONINTERACTIVE=1 /bin/bash -c "$(curl -sSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	echo "Homebrew installed!"
 else
 	echo "$(brew --version) already installed."
@@ -30,13 +30,13 @@ fi
 brew doctor
 
 # Terminal selection
-echo "Select terminal (1: Alacritty, 2: Ghostty (default), 3: Warp):"
+echo "Select terminal (1: Alacritty, 2: Warp, default: Ghostty):"
 read -r choice
 case "$choice" in
   1)
     SELECTED="alacritty"
     ;;
-  3)
+  2)
     SELECTED="warp"
     ;;
   ""|*)
@@ -69,7 +69,7 @@ fi
 # Ensure .oh-my-zsh is already installed
 if [[ -z "${ZSH}" || ! -d "${ZSH}" ]]; then
 	echo "Oh My Zsh not found. Installing..."
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	sh -c "$(curl -sSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else
 	echo "Oh My Zsh already installed."
 fi
