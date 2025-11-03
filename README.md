@@ -18,18 +18,18 @@ This repo provides a single `install.sh` bootstrap script that automates setup f
 1. **Open Terminal** (built-in macOS Terminal.app suffices initially).
 
 2. **Run the Installation Script**:
-   - **Preferred (One-Liner Install – No Git or Clone Needed)**:
+    - **Preferred (One-Liner Install – No Git or Clone Needed)**:
 
       Using `curl`:
       ```bash
-      curl -sSL https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
+      curl -o /tmp/install.sh https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh && bash /tmp/install.sh
       ```
-     Or with `wget`:
-      
-     ```bash
-     wget -O- https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh | bash
-     ```
-      - Downloads and executes the script directly. Installs everything, including terminal selection prompt (1: Alacritty, 2: Warp, default: Ghostty). Enter your admin password when prompted (for Homebrew setup and app installs). No external files needed. Total: 5-15 min.
+      Or with `wget`:
+       
+      ```bash
+      wget -O /tmp/install.sh https://raw.githubusercontent.com/axl-lab/start/refs/heads/main/install.sh && bash /tmp/install.sh
+      ```
+      - Downloads the script to /tmp/install.sh and executes it locally. Installs everything, including terminal selection prompt (1: Alacritty, 2: Warp, default: Ghostty). Enter your admin password when prompted (for Homebrew setup and app installs). Script is cleaned up automatically on reboot. Total: 5-15 min.
    - **Alternative (Full Repo Access – For Customizing Packages)**:
      ```
      git clone https://github.com/axl-labs/start.git ~/start
