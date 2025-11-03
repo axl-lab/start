@@ -33,13 +33,13 @@ brew doctor
 echo "Select terminal (1: Alacritty, 2: Warp, default: Ghostty):"
 read -r choice
 case "$choice" in
-  1)
+  "1")
     SELECTED="alacritty"
     ;;
-  2)
+  "2")
     SELECTED="warp"
     ;;
-  ""|*)
+  *)
     SELECTED="ghostty"
     ;;
 esac
